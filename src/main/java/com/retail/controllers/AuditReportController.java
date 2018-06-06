@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AuditReportController {
 
 	@RequestMapping("/load") 
-	public  String pring()
+	public  String print()
 	{
 		 return " in auditReportontroller";
 	}

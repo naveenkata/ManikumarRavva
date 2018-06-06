@@ -5,37 +5,30 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.SelectProvider;
-import org.apache.ibatis.type.JdbcType;
-import org.mybatis.dynamic.sql.select.render.SelectStatementProvider;
-import org.mybatis.dynamic.sql.util.SqlProviderAdapter;
+import org.apache.ibatis.annotations.SelectKey;
+import org.apache.ibatis.annotations.Update;
 
-import com.retail.DTO.ErrorCategoryDTO;
-import com.retail.DTO.StudentDTO;
+import com.retail.models.ErrorCategory;
 
 @Mapper
 public interface ErrorCategoryMapper {
 
-    @SelectProvider(type=SqlProviderAdapter.class, method="select")
-    
-    @Results(id="ErrorCategoryDetails", value= {
-            @Result(column="ID", property="id", jdbcType=JdbcType.INTEGER),
-            @Result(column="NAME", property="Name", jdbcType=JdbcType.VARCHAR),
-        
-    })
-            List<StudentDTO> selectMany(SelectStatementProvider  selectStatement);
+	@Select("select * from RetailDashboard.ErrorCategory where  status='Active' ")
+	List<ErrorCategory> selectAll() throws SQLException;
+
+	@Insert( " INSERT into "
+			+ " retaildashboard.errorcategory(errortype,description ,targetdate  ,createddate , updateddate , createdby ,updatedby ,status) "
+			+ " values( #{errorType},#{description},#{targetDate},#{createdDate},#{updatedDate},"
+			+ " #{createdBy},#{UpdatedBy}, #{status})")
+		
+	@SelectKey(statement = "SELECT LAST_INSERT_ID()", keyProperty = "errorCategoryId", before = false, resultType = Integer.class)
+	void addErrorCategory(ErrorCategory insertList) throws SQLException;
+
 	
-    
-    @Select("select * from RetailDashboard.ErrorCategory")
-	List<ErrorCategoryDTO> selectAll();
- 
-    @Insert(" INSERT into "
-    		+" retaildashboard.errorcategory(errortype,description ,targetdate  ,createddate , updateddate , createdby ,updatedby ,status) "
-    		+ " values( #{errorType},#{description},TimeStamp(#{targetDate}),TimeStamp(#{createdDate}),TimeStamp(#{updatedDate}), #{createdBy},#{UpdatedBy}, #{status}")          
-    void  insertErrorCategory(ErrorCategoryDTO insertList) throws SQLException;
-    
-    
+	@Update("update  RetailDashboard.ErrorCategory "
+			+" set description= #{description},status=#{status} WHERE ErrorCategoryid =#{errorCategoryId}; ")
+	void updateErrorCategory(ErrorCategory updateList) throws SQLException;
+	
+	
 }

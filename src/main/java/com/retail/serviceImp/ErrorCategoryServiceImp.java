@@ -1,13 +1,14 @@
 package com.retail.serviceImp;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.retail.DAO.ErrorCategoryDAO;
-import com.retail.DTO.ErrorCategoryDTO;
-import com.retail.DTO.StudentDTO;
+import com.retail.models.ErrorCategory;
 import com.retail.services.ErrorCategoryService;
 
 
@@ -19,23 +20,36 @@ public class ErrorCategoryServiceImp implements ErrorCategoryService {
 	private ErrorCategoryDAO errorCategoryDao;
 	
 	
-	public  List<StudentDTO> selectMany()
+	
+	public Map<String,List<ErrorCategory>> selectAll()
 	{
-		return errorCategoryDao.selectMany();
-	}
-	public List<ErrorCategoryDTO> selectAll()
-	{
+		Map<String ,List<ErrorCategory>> map=new HashMap<>();
+		map.put("data",errorCategoryDao.selectAll());
 		
-		return errorCategoryDao.selectAll();
+		return map;
 	}
 
-	public  Boolean createErrorCategory(ErrorCategoryDTO insertList)
+	public  Boolean addErrorCategory(ErrorCategory insertList)
 	{
-		  if(errorCategoryDao.createErrorCategory(insertList))
-		  {
-			  return true;
-		  }
-		   return false;
 		
+				errorCategoryDao.addErrorCategory(insertList);
+				
+		 if(insertList.getErrorCategoryId()!=null)		
+		
+			 {
+			   System.out.println("success");
+			   return true;
+			 }
+		 else
+		 {
+			 return false;
+		 }
+		  
+		
+	}
+	public Boolean updateErrorCategory(ErrorCategory updatelist)
+	{
+		
+		return null;
 	}
 }

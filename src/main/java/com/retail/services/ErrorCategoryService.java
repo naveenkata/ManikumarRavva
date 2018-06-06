@@ -1,14 +1,14 @@
 package com.retail.services;
 
 import java.util.List;
+import java.util.Map;
 
-import com.retail.DTO.ErrorCategoryDTO;
-import com.retail.DTO.StudentDTO;
+import com.retail.models.ErrorCategory;
 
 public interface ErrorCategoryService {
 
-	List<StudentDTO> selectMany();
-	List<ErrorCategoryDTO> selectAll();
-	Boolean createErrorCategory(ErrorCategoryDTO insertList);	
-  
+	
+	 Map<String,List<ErrorCategory>> selectAll();
+	Boolean addErrorCategory(ErrorCategory insertList);	
+    Boolean updateErrorCategory(ErrorCategory updatelist);
 }

@@ -6,14 +6,14 @@ public class ErrorCategoryDTO {
 	
       
 	    private Integer errorCategoryId;
-	    String errorType;
-	    String description;
-	    Date   targetDate;
-	    Date   createdDate;
-	    Date   updatedDate;
-	    String createdBy;
-	    String   UpdatedBy;
-	    String status;
+	    private String errorType;
+	    private String description;
+	    private Date   targetDate;
+	    private Date   createdDate;
+	    private Date   updatedDate;
+	    private String createdBy;
+	   private String   UpdatedBy;
+	    private String status;
 	    
 	    private String  errorMessage;
 	    
