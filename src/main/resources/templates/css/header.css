@@ -1,0 +1,126 @@
+body,
+html {
+   
+
+   
+   line-height: 1
+}
+
+
+.fa,
+.fas {
+    font-size: 15px;
+}
+
+
+
+/*Adjust the height for sibling items*/
+
+.dashboardMain {
+
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row;
+    flex-flow: row;
+}
+
+.dashboardMain>.dashboardItem {
+    -webkit-flex: 3 1 60%;
+    flex: 3 1 60%;
+    -webkit-order: 2;
+    order: 2;
+}
+
+@media all and (max-width: 1200px) {
+
+    .dashboardMain {
+        -webkit-flex-flow: column;
+        flex-flow: column;
+    }
+
+    .dashboardMain>.dashboardItem {
+        -webkit-order: 0;
+        order: 0;
+    }
+
+    .dashboardMain>.dashboardItem,
+    #dashboardMain>.dashboardItem {
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+        min-height: 50px;
+
+    }
+}
+
+/*End*/
+
+text {
+    font: 14px sans-serif !important;
+}
+
+#appHealth text {
+    font: 14px sans-serif !important;
+}
+
+.containerPie {
+    width: 80%;
+    margin: 15px auto;
+}
+
+#navbar li a {
+    color: white;
+    font-weight: bold;
+    padding-top: 14px;
+}
+
+#navbar li.active a {
+    background-color: #d0e2f2;
+    color: black;
+    font-weight: bold;
+}
+
+
+
+.bar {
+    fill: steelblue;
+}
+
+.bar:hover {
+    fill: brown;
+}
+
+.axis {
+    font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.backgroundColor,
+thead {
+    background-color: #337ab7 !important;
+    color: white !important;
+}
+
+img {
+    width: 100%;
+    height: 180px;
+}
+
+.navbar img {
+    width: 80%;
+    height: 65px;
+}
+
+.navbar-nav>li>a {
+    padding-top: 30px;
+    padding-bottom: 10px
+}
+
+.navbar .glyphicon {
+    top: 30px;
+}

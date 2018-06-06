@@ -1,0 +1,23 @@
+
+th.ui-state-default{
+  background-color: #337ab7 !important;
+}
+
+.ui-datatable .ui-datatable-thead > tr > th{
+  font-weight: bolder;
+}
+
+#pr_id_1{
+  min-width : 500px !important;
+}
+
+span.ui-column-title{
+  color : white
+}
+.ui-datatable .ui-datatable-thead > tr > th, .ui-datatable .ui-datatable-tfoot > tr > td, .ui-datatable .ui-datatable-data > tr > td{
+  padding : .50em .5em !important; 
+}
+
+.ui-dialog.ui-widget .ui-dialog-content{
+  height : 200px !important;
+}

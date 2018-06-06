@@ -1,0 +1,576 @@
+{
+    "dataset": {
+        "data": [
+            {
+                "date": "2018-04-30",
+                "states": {
+                    "state": [
+                        {
+                            "stateCode": "IL",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "NM",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "OK",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "TX",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "MT",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        }
+                    ]
+                }
+            },
+            {
+                "date": "2018-04-29",
+                "states": {
+                    "state": [
+                        {
+                            "stateCode": "IL",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "NM",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "OK",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "TX",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "MT",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        }
+                    ]
+                }
+            },
+            {
+                "date": "2018-04-28",
+                "states": {
+                    "state": [
+                        {
+                            "stateCode": "IL",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "NM",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "OK",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "TX",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "MT",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        }
+                    ]
+                }
+            },
+            {
+                "date": "2018-04-27",
+                "states": {
+                    "state": [
+                        {
+                            "stateCode": "IL",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "NM",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "OK",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "TX",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "MT",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        }
+                    ]
+                }
+            },
+            {
+                "date": "2018-04-26",
+                "states": {
+                    "state": [
+                        {
+                            "stateCode": "IL",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "NM",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "OK",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "TX",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "MT",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        }
+                    ]
+                }
+            },
+            {
+                "date": "2018-04-25",
+                "states": {
+                    "state": [
+                        {
+                            "stateCode": "IL",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "NM",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "OK",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "TX",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "MT",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        }
+                    ]
+                }
+            },
+            {
+                "date": "2018-04-24",
+                "states": {
+                    "state": [
+                        {
+                            "stateCode": "IL",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "NM",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "OK",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "TX",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "MT",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        }
+                    ]
+                }
+            },
+            {
+                "date": "2018-04-23",
+                "states": {
+                    "state": [
+                        {
+                            "stateCode": "IL",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "NM",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "OK",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "TX",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "MT",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        }
+                    ]
+                }
+            },
+            {
+                "date": "2018-04-22",
+                "states": {
+                    "state": [
+                        {
+                            "stateCode": "IL",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "NM",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "OK",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "TX",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "MT",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        }
+                    ]
+                }
+            },
+            {
+                "date": "2018-04-21",
+                "states": {
+                    "state": [
+                        {
+                            "stateCode": "IL",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "NM",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "OK",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "TX",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        },
+                        {
+                            "stateCode": "MT",
+                            "TotalMembers": "2123",
+                            "GoodMembers": "2120",
+                            "AuditMembers": "3",
+                            "AuditGoodMembers": "2",
+                            "MissingInHPS": "1",
+                            "PTDMismatchMembers": "0",
+                            "MissingInRMS": "0"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

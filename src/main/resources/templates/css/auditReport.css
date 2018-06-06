@@ -1,0 +1,28 @@
+.dot100 {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #bbb;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 100px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.aDot {
+    background-color: #808080;
+}
+
+.bDot {
+    background-color: #78e2bc;
+}
+
+.cDot {
+    background-color: #77fb3e;
+}
+
+.dDot {
+    background-color: #9267b1;
+}
