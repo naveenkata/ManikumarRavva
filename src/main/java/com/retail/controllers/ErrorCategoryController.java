@@ -21,7 +21,7 @@ public class ErrorCategoryController {
 	@Autowired
 	private ErrorCategoryService errorCategoryService;
 
-	@GetMapping("/errorCategoryDetails")
+	@GetMapping("/load")
 	public Map<String, List<ErrorCategory>> selectAll() {
 		return errorCategoryService.selectAll();
 	}
@@ -39,8 +39,9 @@ public class ErrorCategoryController {
 	@PutMapping("/update")
 	public String updateErrorCategory(@RequestBody ErrorCategory errorCategory) {
 		final Boolean status;
-		if (errorCategory !=null && errorCategory.getErrorCategoryId()!=null) {
-			status = errorCategoryService.updateErrorCategory(errorCategory);
+		if ((errorCategory!=null) && errorCategory.getErrorCategoryId()!=null) {
+			
+			  status = errorCategoryService.updateErrorCategory(errorCategory);
 
 			if (status) {
 				return "update Successful!";
