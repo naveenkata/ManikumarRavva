@@ -8,6 +8,7 @@ import { Dialog } from 'primereact/components/dialog/Dialog';
 import error_category from './error_category';
 import 'font-awesome/css/font-awesome.min.css';
 import { Calendar } from 'primereact/components/calendar/Calendar';
+import axios from 'axios';
 
 import '../../css/errorCategory.css';
 import 'primereact/resources/primereact.min.css';
@@ -21,41 +22,45 @@ class ErrorCategory extends Component {
 
     constructor(props) {
         super(props);
-
         this.state = {
-            data: null,
-            row: { description: '', targetDate: '', createdDate: '', updatedDate: '', createdBy: '', updatedBy: '', status: '' },
-            selectedRow : -1
+            data: [],
+            row: {  categoryId:'',description: '', targetDate: '', createdDate: '', updatedDate: '', createdBy: '', updatedBy: '', status: '' },
+            selectedRow: -1
         };
+        axios.get('/ErrorCategory/load').then
+            (response => {
+                this.setState({ data: response.data });
+            }
 
+            )
 
-        this.changeStatus = this.changeStatus.bind(this);
-        this.changeDescription = this.changeDescription.bind(this);        
-        this.onCarSelect = this.onCarSelect.bind(this);
+        // this.changeStatus = this.changeStatus.bind(this);
+        // this.changeDescription = this.changeDescription.bind(this);        
+        this.onRowSelect = this.onRowSelect.bind(this);
+        this.save = this.save.bind(this);
         // this.changeUpdatedby = this.changeUpdatedby.bind(this);
         // this.changeCreatedby = this.changeCreatedby.bind(this);
     }
 
-    componentDidMount() {
-        this.setState({ data: error_category });
-    }
 
-    onEditorValueChange(props, value) {
-        let updatedData = [...props.value];
-        updatedData[props.rowIndex][props.field] = value;
 
-        this.setState({ data: updatedData });
-    }
 
-    inputTextEditor(props, field) {
-        return <InputText type="text" value={props.rowData[field]} onChange={(e) => this.onEditorValueChange(props, e.target.value)} />;
-    }
+    // onEditorValueChange(props, value) {
+    //     let updatedData = [...props.value];
+    //     updatedData[props.rowIndex][props.field] = value;
 
-    changeDescription(props) {
+    //     this.setState({ data: updatedData });
+    // }
 
-        return this.inputTextEditor(props, 'description');
+    // inputTextEditor(props, field) {
+    //     return <InputText type="text" value={props.rowData[field]} onChange={(e) => this.onEditorValueChange(props, e.target.value)} />;
+    // }
 
-    }
+    // changeDescription(props) {
+
+    //     return this.inputTextEditor(props, 'description');
+
+    // }
 
     //  changeUpdatedby(props)
     //   {
@@ -67,7 +72,7 @@ class ErrorCategory extends Component {
     //   return this.inputTextEditor(props,'createdBy');
     // }
 
-    changeStatus(props) {
+    /*changeStatus(props) {
         let status = [
             { label: 'In Active', value: 'In Active' },
             { label: 'Active', value: 'Active' }
@@ -78,27 +83,27 @@ class ErrorCategory extends Component {
             <Dropdown value={this.state.data[props.rowIndex].status} options={status}
                 onChange={(e) => { this.onEditorValueChange(props, e.value) }} style={{ width: '100%' }} />
         );
-    }
+    }*/
 
     addNew() {
         this.newRow = true;
         this.setState({
-            row: { description: '', targetDate: '', createdDate: '', updatedDate: '', createdBy: '', updatedBy: '', status: '' },
+            row: { categoryId:'',description: '', targetDate: '', createdDate: '', updatedDate: '', createdBy: '', updatedBy: '', status: '' },
             displayDialog: true,
 
         });
     }
 
-    formatDate(date) {
-        let month = '' + (date.getMonth() + 1);
-        let day = '' + date.getDate();
-        let year = date.getFullYear();
+    // formatDate(date) {
+    //     let month = '' + (date.getMonth() + 1);
+    //     let day = '' + date.getDate();
+    //     let year = date.getFullYear();
 
-        if (month.length < 2) month = '0' + month;
-        if (day.length < 2) day = '0' + day;
+    //     if (month.length < 2) month = '0' + month;
+    //     if (day.length < 2) day = '0' + day;
 
-        return [day, month, year].join('/');
-    }
+    //     return [day, month, year].join('/');
+    // }
 
     updateProperty(property, value) {
         let row = this.state.row;
@@ -124,11 +129,31 @@ class ErrorCategory extends Component {
             // var date = this.convertDate(new Date());
             // this.state.row.createdDate = date;
             // this.state.row.updatedDate = date;
-            data.push(this.state.row);
+            //   data.push(this.state.row);
+            axios.post('/ErrorCategory/add',this.state.row).then(
+                (response)=>{
+                    this.state.data.push(response.data);
+                    this.setState((data)=>{this.state.data = data});
+                }
+            )
+        
         }
-        else
-            data[this.findSelectedRowIndex()] = this.state.row;
-            this.setState({ data: data, selectedRow: null, row: null, displayDialog: false });
+        else{
+            axios.put('/ErrorCategory/update',this.state.row).then(
+                (response)=>{
+                    if(response.data)
+                    {
+                    this.state.data.push(this.state.row);
+                    this.setState((data)=>{this.state.data = data});
+                    }else{
+                        prompt("Update unsuccessfull");
+                    }
+                }
+            )
+
+        }
+           // data[this.findSelectedRowIndex()] = this.state.row;
+        this.setState({ data: data, selectedRow: null, row: null, displayDialog: false });
     }
 
     // delete() {
@@ -150,21 +175,20 @@ class ErrorCategory extends Component {
         this.dt.exportCSV();
     }
 
-    onCarSelect(e){
-   this.newRow = false;
+    onRowSelect(e) {
+        this.newRow = false;
         this.setState({
-            displayDialog:true     ,
-            row :  Object.assign({},e),
+            displayDialog: true,
+            row: Object.assign({}, e),
             selectedRow: e
         });
-      debugger;
+        debugger;
     }
 
 
     render() {
-
         let dialogFooter = <div className="ui-dialog-buttonpane ui-helper-clearfix">
-            <Button label={this.newRow?"Create":"update"} icon="fa-check" onClick={this.save.bind(this)} />
+            <Button label={this.newRow ? "Create" : "update"} icon="fa-check" onClick={this.save} />
         </div>;
         let status = [
             { label: 'InActive', value: 'InActive' },
@@ -183,7 +207,7 @@ class ErrorCategory extends Component {
                                 <h4>Error Category</h4>
                             </div>
                         </div>
-                        <div className="row">
+                        <div className="row ">
 
                             <div className="ui-helper-clearfix col-12" >
                                 <Button style={{ float: 'right', color: 'black', backgroundColor: 'white' }} onClick={this.export.bind(this)}><span class="fa-upload ui-button-icon ui-c fa fa-fw ui-button-icon-left"></span></Button>
@@ -194,14 +218,14 @@ class ErrorCategory extends Component {
                             <DataTable id="table" paginator={true} rows={10} value={this.state.data} responsive={true} ref={(el) => { this.dt = el; }}
                                 onSelectionChange={(e) => { this.setState({ selectedRow: e.data }); }} rowsPerPageOptions={[5, 10, 20]}  >
 
-                                <Column field="description" header={<h6>Description<span className="fa fa-fw fa-pencil" /></h6>} editor={this.changeDescription} />
+                                <Column field="description" header={<h6>Description<span className="fa fa-fw fa-pencil" /></h6>} />
                                 <Column field="targetDate" header={<h6>Target Date</h6>} />
                                 <Column field="createdDate" header={<h6>Created Date</h6>} />
                                 <Column field="updatedDate" header={<h6>Updated Date</h6>} />
                                 <Column field="createdBy" header={<h6>Created By</h6>} />
                                 <Column field="updatedBy" header={<h6>Updated By</h6>} />
-                                <Column field="status" header={<h6>Status<span className="fa fa-fw fa-pencil" /></h6>} editor={this.changeStatus} />
-                                 <Column field="" header={<h6>Action</h6>} body={(e)=>{ return <button  onClick={this.onCarSelect.bind(this,e)}>Edit</button>}} />
+                                <Column field="status" header={<h6>Status<span className="fa fa-fw fa-pencil" /></h6>} />
+                                <Column field="" header={<h6>Action</h6>} body={(e) => { return <button onClick={this.onRowSelect.bind(this, e)}><i className="fa fa-fw fa-pencil" ></i> </button> }} />
                             </DataTable>
 
 
