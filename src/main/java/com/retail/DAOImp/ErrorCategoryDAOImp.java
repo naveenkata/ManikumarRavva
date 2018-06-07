@@ -16,8 +16,12 @@ public class ErrorCategoryDAOImp implements ErrorCategoryDAO {
 	@Autowired
 	ErrorCategoryMapper errorCategoryMapper;
 
-	public List<ErrorCategory> selectAll() {
-		return errorCategoryMapper.selectAll();
+	public List<ErrorCategory> selectAll()  {
+
+		
+			return errorCategoryMapper.selectAll();
+		
+		
 	}
 
 	public Boolean addErrorCategory(ErrorCategory insertList) {
@@ -31,5 +35,15 @@ public class ErrorCategoryDAOImp implements ErrorCategoryDAO {
 		}
 
 	}
+	public Boolean updateErrorCategory(ErrorCategory updatelist)
+	{
+		try {
+			errorCategoryMapper.updateErrorCategory(updatelist);
+			return true;
+		} catch (SQLException e) {
 
+			return false;
+		}
+		
+	}
 }

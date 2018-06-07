@@ -50,6 +50,6 @@ public class ErrorCategoryServiceImp implements ErrorCategoryService {
 	public Boolean updateErrorCategory(ErrorCategory updatelist)
 	{
 		
-		return null;
+		return errorCategoryDao.updateErrorCategory(updatelist);
 	}
 }
