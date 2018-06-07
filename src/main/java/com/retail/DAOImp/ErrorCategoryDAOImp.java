@@ -16,8 +16,12 @@ public class ErrorCategoryDAOImp implements ErrorCategoryDAO {
 	@Autowired
 	ErrorCategoryMapper errorCategoryMapper;
 
-	public List<ErrorCategory> selectAll() {
-		return errorCategoryMapper.selectAll();
+	public List<ErrorCategory> selectAll()  {
+
+		
+			return errorCategoryMapper.selectAll();
+		
+		
 	}
 
 	public Boolean addErrorCategory(ErrorCategory insertList) {
